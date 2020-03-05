@@ -1,6 +1,4 @@
-from flask import Flask 
-from flask import render_template
-from flask import request
+from flask import Flask,render_template,request
 from datetime import datetime as dt
 import os
 
@@ -21,7 +19,7 @@ def main2():
         return render_template('taken.html')
     info[username]=email
     user_name=username
-    return render_template('NextPage.html',name=username)
+    return render_template('NextPage.html',name=user_name)
 
 @app.route('/login')
 def main3():
